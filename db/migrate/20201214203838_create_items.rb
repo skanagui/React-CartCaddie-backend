@@ -5,7 +5,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :image
       t.float :price
       t.string :description
-      t.integer :courseId
+      t.integer :golf_course_id
 
       t.timestamps
     end

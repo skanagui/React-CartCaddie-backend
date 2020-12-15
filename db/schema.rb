@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_203856) do
     t.string "image"
     t.float "price"
     t.string "description"
-    t.integer "courseId"
+    t.integer "golf_course_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
