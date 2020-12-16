@@ -7,16 +7,16 @@ class Api::V1::UsersController < ApplicationController
     end 
   
     def index
-      @users = User.all
-      render json: @user 
+      users = User.all
+      render json: users 
     end
   
     def show
-      render json: @user
+      render json: user
     end
   
     def create
-       @user = User.create(user_params)
+       user = User.create(user_params)
       
     #   if @user.valid?
     #     @token = encode_token(user_id: @user.id)
@@ -28,12 +28,12 @@ class Api::V1::UsersController < ApplicationController
     end
   
     def update
-      @user.update(user_params)
-      render json: @user
+      user.update(user_params)
+      render json: user
     end
   
     def destroy
-      @user.destroy
+      user.destroy
     end
   
     # def login
@@ -49,7 +49,7 @@ class Api::V1::UsersController < ApplicationController
     private 
     
     def find_user
-      @user = User.find(params[:id])
+      user = User.find(params[:id])
     end
   
     def user_params

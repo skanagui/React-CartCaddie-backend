@@ -3,6 +3,7 @@ class Api::V1::GolfCoursesController < ApplicationController
 
     def index
         golf_courses = GolfCourse.all 
+        render json: golf_courses 
     end 
 
     def show
