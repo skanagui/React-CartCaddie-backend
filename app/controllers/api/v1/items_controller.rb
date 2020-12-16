@@ -7,11 +7,12 @@ class Api::V1::ItemsController < ApplicationController
 
     def show
         @item = Item.all 
+        render json: @item
     end 
 
     def show
         @item = Item.find(params[:id])
-        render json: @items
+        render json: @item
     end
 
 

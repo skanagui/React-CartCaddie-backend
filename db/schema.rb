@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_203856) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "car_items", force: :cascade do |t|
+  create_table "cart_items", force: :cascade do |t|
     t.integer "cart_id"
     t.integer "item_id"
     t.integer "quantity"
@@ -25,8 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_203856) do
 
   create_table "carts", force: :cascade do |t|
     t.integer "user_id"
-    t.string "total_price"
-    t.string "float"
+    t.float "total_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
