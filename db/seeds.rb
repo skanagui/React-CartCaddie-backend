@@ -10,6 +10,7 @@ GolfCourse.destroy_all
 Item.destroy_all
 Cart.destroy_all
 CartItem.destroy_all
+Review.destroy_all 
 
 user1 = User.create!(name: "John Doe", email_address: "user@email.com", password: "pass123")
 
@@ -23,3 +24,5 @@ item2 = Item.create!(name: "Chicken Club", image: "https://img.taste.com.au/HWX_
 cart1= Cart.create!(user_id: user1.id, total_price: 4.00 )
 
 cartItem1 = CartItem.create!(cart_id: cart1.id, item_id:item1.id, quantity: 1)
+
+review1 = Review.create!(user_id: user1.id, golf_course_id: golfcourse1.id, title: "Amazing", body: "This course was fun, and the drinks kept coming!", date: "12/6/2020" )
