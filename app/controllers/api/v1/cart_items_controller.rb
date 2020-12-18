@@ -27,7 +27,7 @@ class Api::V1::CartItemsController < ApplicationController
         
         cart_item = CartItem.find(params[:id])
         cart_item.destroy
-        render json: {}
+        render json: cart_item
     end
 
     private

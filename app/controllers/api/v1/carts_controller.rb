@@ -25,7 +25,7 @@ class Api::V1::CartsController < ApplicationController
     end
     
     def destroy
-        byebug
+        
     end
 
     private
