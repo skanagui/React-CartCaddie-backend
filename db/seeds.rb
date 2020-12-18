@@ -26,3 +26,5 @@ cart1= Cart.create!(user_id: user1.id, total_price: 4.00 )
 cartItem1 = CartItem.create!(cart_id: cart1.id, item_id:item1.id, quantity: 1)
 
 review1 = Review.create!(user_id: user1.id, golf_course_id: golfcourse1.id, title: "Amazing", body: "This course was fun, and the drinks kept coming!", date: "12/6/2020" )
+review2 = Review.create!(user_id: user1.id, golf_course_id: golfcourse1.id, title: "Bad Weather TOO much snow", body: "This course was fun, and the drinks kept coming!", date: "08/9/2000" )
+review3 = Review.create!(user_id: user1.id, golf_course_id: golfcourse1.id, title: "Horrible", body: "This course was fun, and the drinks kept coming!", date: "01/12/2015" )
