@@ -12,6 +12,7 @@ class Api::V1::CartItemsController < ApplicationController
     end
 
     def create
+        p params
         cart_item = CartItem.create!(cart_item_params)
         render json: cart_item
     end
