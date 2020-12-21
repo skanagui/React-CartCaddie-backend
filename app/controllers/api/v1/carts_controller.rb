@@ -22,6 +22,13 @@ class Api::V1::CartsController < ApplicationController
         # byebug
         cart.update(cart_params)
         render json: cart 
+
+        # @cart.update(check_out: true, total_price: params[:total_price])
+        # @new_cart = Cart.create(user_id: 1)
+
+        
+
+        
     end
     
     def destroy
@@ -31,7 +38,7 @@ class Api::V1::CartsController < ApplicationController
     private
 
     def cart_params
-        params.require(:cart).permit(:user_id)
+        params.require(:cart).permit(:user_id, :check_out)
     end
 
 end

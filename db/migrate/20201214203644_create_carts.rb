@@ -4,6 +4,7 @@ class CreateCarts < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.float :total_price
       
+      
 
       t.timestamps
     end

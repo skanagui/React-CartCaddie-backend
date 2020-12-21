@@ -9,7 +9,9 @@
 
 
 User.destroy_all
+User.reset_pk_sequence  
 GolfCourse.destroy_all
+GolfCourse.reset_pk_sequence
 Item.destroy_all
 Cart.destroy_all
 Cart.reset_pk_sequence
@@ -25,7 +27,8 @@ item1 = Item.create!(name: "6-Pack Budlight", image: "https://www.totalwine.com/
 item2 = Item.create!(name: "Bacon Burger", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWrlwblTaCkEVWffS9wxSMom8D_XNtpDg3uw&usqp=CAU", price: 7.00, description: "Crispy bacon, Angus Beef Patty, Lettuce, Tomatoes, Onions, Pickles.", golf_course_id: golfcourse1.id )
 item2 = Item.create!(name: "Chicken Club", image: "https://img.taste.com.au/HWX_VnFk/w720-h480-cfill-q80/taste/2016/11/classic-turkey-club-sandwich-24417-1.jpeg", price: 8.00, description: "Classic Turkey Club", golf_course_id: golfcourse1.id )
 
-cart1= Cart.create!(user_id: user1.id, total_price: 4.00 )
+cart1= Cart.create!(user_id: user1.id, total_price: 4.00, check_out: false )
+cart2= Cart.create!(user_id: user1.id, total_price: 4.00, check_out: true )
 
 cartItem1 = CartItem.create!(cart_id: cart1.id, item_id:item1.id, quantity: 1)
 
